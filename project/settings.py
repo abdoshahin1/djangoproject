@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'job',
     'blog',
     'home',
-    'contact',
+    'contacta',
     'login',
 ]
 
