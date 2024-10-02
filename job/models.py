@@ -5,6 +5,10 @@ jobType = (
     ('full time','full time'),
     ('part time','part time'),
 )
+
+def upload_image(job,filename):
+    imagename, extention = filename.split(".")
+    return f"jobs/{job.id}.{extention}"
 class job(models.Model):
     title = models.CharField(max_length =20)
     #location
@@ -15,6 +19,7 @@ class job(models.Model):
     salary = models.IntegerField(default=0)
     experience = models.IntegerField(default=1)
     category = models.ForeignKey('category', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=upload_image)
     def __str__(self) -> str:
         return self.title
 
