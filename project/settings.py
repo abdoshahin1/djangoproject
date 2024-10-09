@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'contacta',
     'login',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
